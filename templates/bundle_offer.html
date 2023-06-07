@@ -10,12 +10,14 @@
 <style>
   body {
     font-family: 'Red Hat Display', sans-serif;
+    background-color: rgb(247, 247, 247);
 }
 .pip
 {
   position:relative;
-  left:18%;
-  text-align: center;
+  top: 20px;
+  left:-20px;
+  text-align:left;
   font-size: 50px;
   color: rgb(119, 33, 225);
 }
@@ -84,10 +86,12 @@
                     <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Technology Giants
                     </a> -->
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                       Technology Giants
                     </button>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                    <br> 
+                    <br>
+                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
                       Consumer Discretionary Leaders
                     </button>
           
@@ -98,15 +102,15 @@
                       Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       <div class = "row">
                         <h1> Option 1 :: Technology Giants </h1>
-                        <div class = "col-4">
+                        <div class = "col-2">
                         <li> Apple Inc. (AAPL) </li>
                         <li> Microsoft Corporation (MSFT) </li>
                         <li> Alphabet Inc. (GOOG) </li>
                         <li> Facebook, Inc. (META) </li>
                       </div>
-                      <div class = "col-4">
+                      <div class = "col-8">
                         <style>
-                          #sampleChart {
+                          .sampleChart {
                              max-width: 300px;
                              height: 150px; }
                           * {   text-align: center;}
@@ -115,8 +119,8 @@
                        </script>
                     <canvas id = "pieChart1"> </canvas>
                        <script>
-                          let canvas = document.getElementById("pieChart1");
-                          new Chart(canvas, {
+                          let canvas1 = document.getElementById("pieChart1");
+                          new Chart(canvas1, {
                              type: "pie",
                              data: {
                                 labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
@@ -129,19 +133,16 @@
                           });
                        </script>
                        </div>
-                <div class = "col-4"> 
-                  <div class="input-group mb-3">
+              
+          
+                      </div>
+                    </div>
+                    <div class="input-group mb-3">
                   
                      <button type="button" class="btn btn-info">Buy</button>
                      <span class="input-group-text">$</span>
                      <input> </input>
                      </div>
-                 
-
-                </div>
-          
-                      </div>
-                    </div>
                   </div>
           <!-- Second Button Content -->
                   <div class="collapse" id="collapseExample2">
@@ -150,13 +151,16 @@
                       Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       <div class = "row">
                         <h1> Option 2 :: Consumer Discretionary Leaders </h1>
+                        <div class = "col-2">
                         <li> The Walt Disney Company </li>
                         <li> Nike, Inc. (NKE) </li>
                         <li> Starbucks Corporation (SBUX) </li>
                         <li> McDonald’s Corporation (MCD) </li>
                         <li> The Coca-Cola Company (KO) </li>
+                        </div>
+                        <div class = "col-8">
                         <style>
-                          #sampleChart {
+                          .sampleChart {
                              max-width: 300px;
                              height: 150px; }
                           * {   text-align: center;}
@@ -178,9 +182,16 @@
                              },
                           });
                        </script>
+                       </div>
           
                       </div>
                     </div>
+                    <div class="input-group mb-3">
+                  
+                     <button type="button" class="btn btn-info">Buy</button>
+                     <span class="input-group-text">$</span>
+                     <input> </input>
+                     </div>
                   </div>
         
       </div>
