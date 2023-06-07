@@ -10,6 +10,8 @@
 <style>
   .bee{
     height:1400px;
+    position: relative;
+    left: 4%;
 
   }
   body{
@@ -19,6 +21,15 @@
     background-attachment: fixed;
   background-size: cover; */
   }
+  .peep{
+  position: fixed;
+  left: 42%;
+}
+video
+{
+  position: absolute;
+  z-index: -1;
+}
 </style>
 <body>
 
@@ -62,15 +73,16 @@
       </div>
     </div>
   </nav>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  
 
-  <!-- <video autoplay loop muted width="1482">
-    <source src="/Users/laurafelix/day11/projecty/CHICAGO SUMMER 2020 AERIAL VIEWS [4K].mp4"/>
- </video> -->
+  <video autoplay loop muted width="100%">
+    <source src="static/Aerial view of the Chicago skyline.mp4"/>
+ </video>
+ <br>
+  <br>
+  <br>
+  <br>
+  <br>
  <div class="container">
   <div class="row">
     <div class="col-2"></div>
@@ -102,11 +114,12 @@
 <div class="col-2"></div>
 </div>
 </div>
+<img class="peep" src="static/Grape Logo.png" width="200">
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright:
-      <a class="text-dark" href="./index.html">grape LLC</a>
+      <a class="text-dark" href="/index">grape LLC</a>
     </div>
     <!-- Copyright -->
   </footer>

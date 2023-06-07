@@ -33,12 +33,21 @@ def index():
 @app.route('/auth', methods = ['GET', 'POST'])
 def name():
     if request.method == 'POST': 
+        bool_check = False
         name = request.form["name"]
-        dictionary_user_name = {'name': name}
+        dictionary_user_name = {'name': name, 'initial_investing_amount': 0, 'expected_net_worth':0 }
         if name not in all_names:
             user_input.insert_one(dictionary_user_name)
+            all_users = list(user_input.find({}))
+            all_names.append(name)
+            for i in all_users:
+                all_names.append(i['name'])
+        else:
+            bool_check=True
+            
 
-        return render_template("bundle_offer.html", props=name, all_names=all_names)
+
+        return render_template("bundle_offer.html", props=name, bool_check=bool_check)
     else:
         return render_template("auth.html")
     
