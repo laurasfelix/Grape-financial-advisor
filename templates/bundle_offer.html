@@ -19,6 +19,10 @@
   font-size: 50px;
   color: rgb(119, 33, 225);
 }
+.peep{
+  position: relative;
+  left: 8px;
+}
 </style>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -62,10 +66,10 @@
         </div>
       </nav>
     
-      <div class="container pip">
+      <div class="container">
         <div class="row"> 
           <div class="col-1"></div>
-          <div class="col-5"> 
+          <div class="col-5 pip"> 
 
             <p> Hi, {{props}}! </p>
             {%if bool_check%}
@@ -75,22 +79,118 @@
             {%endif%}
 
           </div>
-            <div class="col-1">
+          <!-- # Options Collapse Buttons -->
+                  <p>
+                    <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      Technology Giants
+                    </a> -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Technology Giants
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                      Consumer Discretionary Leaders
+                    </button>
+          
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <!-- # Body inside the Collapse Feature -->
+                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      <div class = "row">
+                        <h1> Option 1 :: Technology Giants </h1>
+                        <div class = "col-4">
+                        <li> Apple Inc. (AAPL) </li>
+                        <li> Microsoft Corporation (MSFT) </li>
+                        <li> Alphabet Inc. (GOOG) </li>
+                        <li> Facebook, Inc. (META) </li>
+                      </div>
+                      <div class = "col-4">
+                        <style>
+                          #sampleChart {
+                             max-width: 300px;
+                             height: 150px; }
+                          * {   text-align: center;}
+                       </style>
+                       <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+                       </script>
+                    <canvas id = "pieChart1"> </canvas>
+                       <script>
+                          let canvas = document.getElementById("pieChart1");
+                          new Chart(canvas, {
+                             type: "pie",
+                             data: {
+                                labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                                datasets: [{
+                                   backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                                   borderWidth: 10,
+                                   data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
+                                }]
+                             },
+                          });
+                       </script>
+                       </div>
+                <div class = "col-4"> 
+                  <div class="input-group mb-3">
+                  
+                     <button type="button" class="btn btn-info">Buy</button>
+                     <span class="input-group-text">$</span>
+                     <input> </input>
+                     </div>
+                 
 
-            </div>
-          </div>
-
-        </div>
-        
+                </div>
+          
+                      </div>
+                    </div>
+                  </div>
+          <!-- Second Button Content -->
+                  <div class="collapse" id="collapseExample2">
+                    <div class="card card-body">
+                      <!-- # Body inside the Collapse Feature -->
+                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      <div class = "row">
+                        <h1> Option 2 :: Consumer Discretionary Leaders </h1>
+                        <li> The Walt Disney Company </li>
+                        <li> Nike, Inc. (NKE) </li>
+                        <li> Starbucks Corporation (SBUX) </li>
+                        <li> McDonald’s Corporation (MCD) </li>
+                        <li> The Coca-Cola Company (KO) </li>
+                        <style>
+                          #sampleChart {
+                             max-width: 300px;
+                             height: 150px; }
+                          * {   text-align: center;}
+                       </style>
+                       <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+                       </script>
+                    <canvas id = "pieChart2"> </canvas>
+                       <script>
+                          let canvas = document.getElementById("pieChart2");
+                          new Chart(canvas, {
+                             type: "pie",
+                             data: {
+                                labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                                datasets: [{
+                                   backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                                   borderWidth: 10,
+                                   data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
+                                }]
+                             },
+                          });
+                       </script>
+          
+                      </div>
+                    </div>
+                  </div>
         
       </div>
     
-    
+      <img class="peep" src="static/Grape Logo.png" width="200">
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
           © 2023 Copyright:
-          <a class="text-dark" href="./index.html">grape LLC</a>
+          <a class="text-dark" href="/index">grape LLC</a>
         </div>
         <!-- Copyright -->
       </footer>
