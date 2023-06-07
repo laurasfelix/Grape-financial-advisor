@@ -55,26 +55,116 @@
       </nav>
     
       <div class="container">
-        <div class="row"> 
-          <div class="col-1">
-            <div class="col-5"> 
+        <div class="row">  
 
               <p> Hi, {{props}}! </p>
               {%if props in all_names%}
-              <p> Long time no see!</p>
+              
+        </div>
+        <div class = "row"> 
+            <p> Long time no see!</p>
               {%else%}
               <p> First time here? Don't worry; you're in good hands.</p>
               {%endif%}
-
+        </div>
+<!-- # Options Collapse Buttons -->
+        <p>
+          <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Technology Giants
+          </a> -->
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Technology Giants
+          </button>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            Consumer Discretionary Leaders
+          </button>
+          
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <!-- # Body inside the Collapse Feature -->
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            <div class = "row">
+              <h1> Option 1 :: Technology Giants </h1>
+              <div class = "col-4">
+              <li> Apple Inc. (AAPL) </li>
+              <li> Microsoft Corporation (MSFT) </li>
+              <li> Alphabet Inc. (GOOG) </li>
+              <li> Facebook, Inc. (META) </li>
             </div>
-            <div class="col-1">
-
+            <div class = "col-4">
+              <style>
+                #sampleChart {
+                   max-width: 300px;
+                   height: 150px; }
+                * {   text-align: center;}
+             </style>
+             <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+             </script>
+          <canvas id = "pieChart"> </canvas>
+             <script>
+                let canvas = document.getElementById("pieChart");
+                new Chart(canvas, {
+                   type: "pie",
+                   data: {
+                      labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                      datasets: [{
+                         backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                         borderWidth: 10,
+                         data: [455, 240, 55, 100, 200, 300]
+                      }]
+                   },
+                });
+             </script>
+             </div>
+      
             </div>
           </div>
-
         </div>
+<!-- Second Button Content -->
+        <div class="collapse" id="collapseExample2">
+          <div class="card card-body">
+            <!-- # Body inside the Collapse Feature -->
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            <div class = "row">
+              <h1> Option 2 :: Consumer Discretionary Leaders </h1>
+              <li> The Walt Disney Company </li>
+              <li> Nike, Inc. (NKE) </li>
+              <li> Starbucks Corporation (SBUX) </li>
+              <li> McDonald’s Corporation (MCD) </li>
+              <li> The Coca-Cola Company (KO) </li>
+              <style>
+                #sampleChart {
+                   max-width: 300px;
+                   height: 150px; }
+                * {   text-align: center;}
+             </style>
+             <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+             </script>
+          <canvas id = "pieChart"> </canvas>
+             <script>
+                let canvas = document.getElementById("pieChart");
+                new Chart(canvas, {
+                   type: "pie",
+                   data: {
+                      labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                      datasets: [{
+                         backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                         borderWidth: 10,
+                         data: [455, 240, 55, 100, 200, 300]
+                      }]
+                   },
+                });
+             </script>
+      
+            </div>
+          </div>
+        </div>
+
+
+      
         
-        
+      <!-- ????????   -->
       </div>
     
     
