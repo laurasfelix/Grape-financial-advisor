@@ -11,6 +11,14 @@
   body {
     font-family: 'Red Hat Display', sans-serif;
 }
+.pip
+{
+  position:relative;
+  left:18%;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(119, 33, 225);
+}
 </style>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,19 +62,19 @@
         </div>
       </nav>
     
-      <div class="container">
+      <div class="container pip">
         <div class="row"> 
-          <div class="col-1">
-            <div class="col-5"> 
+          <div class="col-1"></div>
+          <div class="col-5"> 
 
-              <p> Hi, {{props}}! </p>
-              {%if props in all_names%}
-              <p> Long time no see!</p>
-              {%else%}
-              <p> First time here? Don't worry; you're in good hands.</p>
-              {%endif%}
+            <p> Hi, {{props}}! </p>
+            {%if bool_check%}
+            <p> Long time no see!</p>
+            {%else%}
+            <p> First time here? Don't worry; you're in good hands.</p>
+            {%endif%}
 
-            </div>
+          </div>
             <div class="col-1">
 
             </div>
