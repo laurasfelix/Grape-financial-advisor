@@ -51,6 +51,14 @@ def name():
     else:
         return render_template("auth.html")
     
+@app.route("/bundle_offer", methods = ['GET', 'POST'])
+def money(props):
+    if request.method == 'POST':
+        money = request.form["money-invested"]
+        
+        return render_template("networth.html", money=money, props=props)
+    else:
+        return render_template("bundle_offer.html")
 
 if __name__ == '__main__':
     app.run()

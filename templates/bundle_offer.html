@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Red+Hat+Display:wght@300&display=swap');
+  </style>
     <title>Welcome to our Private Equity Investing desk!</title>
 </head>
 <style>
@@ -12,14 +15,26 @@
     font-family: 'Red Hat Display', sans-serif;
     background-color: rgb(247, 247, 247);
 }
+
+.gold-outline {
+    font-size: 50px;
+    color: rgb(231, 210, 124);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(231, 210, 124);
+  }
+
 .pip
 {
   position:relative;
   top: 20px;
-  left:-20px;
+  left:20%;
   text-align:left;
-  font-size: 50px;
-  color: rgb(119, 33, 225);
+  font-size: 100px !important;
+  color:  #000000;
+}
+.pip:hover{
+  color: rgb(162, 115, 219) !important;
+  background-color: rgb(231, 210, 124) !important;
 }
 .peep{
   position: relative;
@@ -27,7 +42,7 @@
 }
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(231, 210, 124) !important;">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index" style="font-size: 30px;"><img width="90px" src="static/Grape Logo.png">   grape</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,17 +98,39 @@
           </div>
           <!-- # Options Collapse Buttons -->
                   <p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                     <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Technology Giants
                     </a> -->
-                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                      Technology Giants
-                    </button>
-                    <br> 
-                    <br>
-                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-                      Consumer Discretionary Leaders
-                    </button>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-4">
+                          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Technology Giants
+                          </button>
+                        </div>
+                        <div class="col-4">
+                          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                            Healthcare Innovators
+                          </button>
+                        </div>
+                        <div class="col-4">
+                          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                            Consumer Discretionary Leaders
+                          </button>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    
+                  
+                   
           
                   </p>
                   <div class="collapse" id="collapseExample">
@@ -137,12 +174,23 @@
           
                       </div>
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-5"> 
+                          <div class="input-group mb-3">
                   
-                     <button type="button" class="btn btn-info">Buy</button>
-                     <span class="input-group-text">$</span>
-                     <input> </input>
-                     </div>
+                            <button type="button" class="btn btn-info">Buy</button>
+                            <span class="input-group-text">$</span>
+                           
+                            <input type="text" name="money-invested" class="form-control"> 
+                            <span class="input-group-text">.00</span>
+                            </div>
+                         </div>
+
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
           <!-- Second Button Content -->
                   <div class="collapse" id="collapseExample2">
@@ -186,14 +234,26 @@
           
                       </div>
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-5"> 
+                          <div class="input-group mb-3">
                   
-                     <button type="button" class="btn btn-info">Buy</button>
-                     <span class="input-group-text">$</span>
-                     <input> </input>
-                     </div>
-                  </div>
+                            <button type="button" class="btn btn-info">Buy</button>
+                            <span class="input-group-text">$</span>
+                           
+                            <input type="text" name="money-invested" class="form-control"> 
+                            <span class="input-group-text">.00</span>
+                            </div>
+                         </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    
         
+      </div>
       </div>
     
       <img class="peep" src="static/Grape Logo.png" width="200">
