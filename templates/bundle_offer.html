@@ -36,6 +36,11 @@
   color: rgb(162, 115, 219) !important;
   background-color: rgb(231, 210, 124) !important;
 }
+
+.bah:hover{
+  color: rgb(162, 115, 219) !important;
+  background-color: rgb(231, 210, 124) !important;
+}
 .peep{
   position: relative;
   left: 8px;
@@ -96,6 +101,50 @@
             {%endif%}
 
           </div>
+          </div>
+          </div>
+
+          {%if not bool_check%}
+
+          <div class="container">
+            <div class="row">
+              <div class="col-9">
+                <br>
+                <p class="bah" style="font-size: 28px; position:relative; left:-290px;"> Starter Guide to Our Platform</p>
+
+                <p style="font-size: 24px; position:relative; left:-200px;"> <ol class="list-group list-group-numbered">
+                  <li class="list-group-item bah">First things first, try checking one of our carefully selected bundles of stocks. 
+                    The idea behind our bunches, or bundles, of stocks, is that they are simply pre-chosen combination of stocks with
+                    optimized weights or percentages of each stock in the entire bunch. 
+                    Click here:
+                    <br>
+                      <img src="/static/step1.png" width="600" height="auto">
+                  </li>
+                  <li class="list-group-item bah">
+                    Wow! Doesn't that look better? Now, take a look at the specific combination and how much of each 
+                    stock you would be buying. Our software runs on a very sophisticated method of optimization for any groups
+                    of stocks, and we offer the possibility with the lowest amounts of risk possible for the highest amount of 
+                    profit that's feasible to obtain. 
+
+                    With the purple arrow, we can see the names of the companies with their respective tickers. With 
+                    the yellow arrow, a pie chart with respective weights for each stock.
+                    <br>
+                    <img src="/static/step2.png" width="600" height="auto">
+                  </li>
+                  <li class="list-group-item bah">
+                    Hey, now it's time to pick whichever won you over! Having analyzed the bundles, when you're ready to 
+                    claim a bundle, just head over to the button right under the data for that specific bundle option and 
+                    write how much you're willing to invest in that specific bundle. You're all set!
+                    <br>
+                    <img src="/static/step3.png" width="600" height="auto">
+                  </li>
+                </ol></p>
+
+              </div>
+            </div>
+          </div>
+
+          {%endif%}
           <!-- # Options Collapse Buttons -->
                   <p>
                     <br>
@@ -115,7 +164,7 @@
                           </button>
                         </div>
                         <div class="col-4">
-                          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
                             Healthcare Innovators
                           </button>
                         </div>
@@ -136,8 +185,7 @@
                   <div class="collapse" id="collapseExample">
                     <div class="card card-body">
                       <!-- # Body inside the Collapse Feature -->
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                      <div class = "row">
+                      <div class="row">
                         <h1> Option 1 :: Technology Giants </h1>
                         <div class = "col-2">
                         <li> Apple Inc. (AAPL) </li>
@@ -160,9 +208,10 @@
                           new Chart(canvas1, {
                              type: "pie",
                              data: {
+                              
                                 labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
                                 datasets: [{
-                                   backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                                   backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
                                    borderWidth: 10,
                                    data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
                                 }]
@@ -195,15 +244,16 @@
 
                     </div>
                   </div>
+               
           <!-- Second Button Content -->
                   <div class="collapse" id="collapseExample2">
                     <div class="card card-body">
                       <!-- # Body inside the Collapse Feature -->
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      
                       <div class = "row">
-                        <h1> Option 2 :: Consumer Discretionary Leaders </h1>
+                        <h1> Option 3 :: Consumer Discretionary Leaders </h1>
                         <div class = "col-2">
-                        <li> The Walt Disney Company </li>
+                        <li> The Walt Disney Company (DIS) </li>
                         <li> Nike, Inc. (NKE) </li>
                         <li> Starbucks Corporation (SBUX) </li>
                         <li> McDonald’s Corporation (MCD) </li>
@@ -224,11 +274,12 @@
                           new Chart(canvas, {
                              type: "pie",
                              data: {
-                                labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                              // {'DIS': 0.0, 'NKE': 0.4137, 'SBUX': 0.24492, 'MCD': 0.25383, 'KO': 0.08755}
+                                labels: ["Disney", "Nike", "Starbucks", "McDonald's", "Coca-Cola"],
                                 datasets: [{
-                                   backgroundColor: ["blue", "red", "green", "purple", "yellow"],
+                                  backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
                                    borderWidth: 10,
-                                   data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
+                                   data: [0.0, 0.4137,  0.24492, 0.25383, 0.08755]
                                 }]
                              },
                           });
@@ -261,7 +312,70 @@
         
       </div>
       </div>
-    
+      <div class="collapse" id="collapseExample3">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          
+          <div class = "row">
+            <h1> Option 2 :: Healthcare Innovators </h1>
+            <div class = "col-2">
+            <li> Johnson & Johnson (JNJ) </li>
+            <li> Pfizer (PFE) </li>
+            <li> Moderna (MRNA) </li>
+            <li> AbbVie Inc. (ABBV) </li>
+            <li> Novartis AG (NVS) </li>
+          </div>
+          <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart3"> </canvas>
+           <script>
+              let canvas3 = document.getElementById("pieChart3");
+              new Chart(canvas3, {
+                 type: "pie",
+                 data: {
+                  // {'JNJ': 0.0, 'PFE': 0.27662, 'MRNA': 0.4558, 'ABBV': 0.26758, 'NVS': 0.0}
+                    labels: ["JNJ", "PFE", "MRNA", "ABBV", "NVS"],
+                    datasets: [{
+                      backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: [0.0,0.27662, 0.4558,  0.26758, 0.0]
+                    }]
+                 },
+              });
+           </script>
+           </div>
+  
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+              <form method="post" action="/bundle_offer">
+              <input class="text" name="button-choice" class="form-control" value="3" hidden>
+              <div class="input-group mb-3">
+          
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+      
+
+            </div>
+          </div>
+        
+        </div>
+      </div>
       <img class="peep" src="static/Grape Logo.png" width="200">
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->

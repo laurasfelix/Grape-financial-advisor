@@ -61,7 +61,6 @@ def name():
             listy = session['users']
             listy.append({'name':name, 'bool_check':True, 'bundle_number': 1})
             session['users'] = listy
-            
             bool_check=True
 
         # return redirect(url_for('.bundle_offer', props=name, bool_check=bool_check))
