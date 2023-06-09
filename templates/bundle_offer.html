@@ -145,6 +145,8 @@
           </div>
 
           {%endif%}
+
+          {%if not bool_check%}
           <!-- # Options Collapse Buttons -->
                   <p>
                     <br>
@@ -376,6 +378,634 @@
         
         </div>
       </div>
+      {%elif bool_check and not custom_picked%}
+      <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Technology Giants
+        </a> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Technology Giants
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                Healthcare Innovators
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                Consumer Discretionary Leaders
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                Your pick!
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+        
+      
+       
+
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          <div class="row">
+            <h1> Option 1 :: Technology Giants </h1>
+            <div class = "col-2">
+           
+                <li> Apple Inc. (AAPL) </li>
+                <li> Microsoft Corporation (MSFT) </li>
+                <li> Alphabet Inc. (GOOG) </li>
+                <li> Facebook, Inc. (META) </li>
+                <li> Facebook, Inc. (META) </li>
+                <li> Facebook, Inc. (META) </li>
+           
+            
+          </div>
+          <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart1"> </canvas>
+           <script>
+              let canvas1 = document.getElementById("pieChart1");
+              new Chart(canvas1, {
+                 type: "pie",
+                 data: {
+                  
+                    labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                    datasets: [{
+                       backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
+                    }]
+                 },
+              });
+           </script>
+           </div>
+  
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+              <form method="post" action="/bundle_offer">
+              <input class="text" name="button-choice" class="form-control" value="1" hidden>
+              <div class="input-group mb-3">
+          
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+      
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+   
+<!-- Second Button Content -->
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          
+          <div class = "row">
+            <h1> Option 3 :: Consumer Discretionary Leaders </h1>
+            <div class = "col-2">
+            <li> The Walt Disney Company (DIS) </li>
+            <li> Nike, Inc. (NKE) </li>
+            <li> Starbucks Corporation (SBUX) </li>
+            <li> McDonald’s Corporation (MCD) </li>
+            <li> The Coca-Cola Company (KO) </li>
+            </div>
+            <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart2"> </canvas>
+           <script>
+              let canvas = document.getElementById("pieChart2");
+              new Chart(canvas, {
+                 type: "pie",
+                 data: {
+                  // {'DIS': 0.0, 'NKE': 0.4137, 'SBUX': 0.24492, 'MCD': 0.25383, 'KO': 0.08755}
+                    labels: ["Disney", "Nike", "Starbucks", "McDonald's", "Coca-Cola"],
+                    datasets: [{
+                      backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: [0.0, 0.4137,  0.24492, 0.25383, 0.08755]
+                    }]
+                 },
+              });
+           </script>
+           </div>
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+            <form method="post" action="/bundle_offer">
+            <input class="text" name="button-choice" class="form-control" value="2" hidden>
+              <div class="input-group mb-3">
+      
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+               
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+
+            </div>
+          </div>
+
+        </div>
+        
+
+</div>
+</div>
+<div class="collapse" id="collapseExample3">
+<div class="card card-body">
+<!-- # Body inside the Collapse Feature -->
+
+<div class = "row">
+<h1> Option 2 :: Healthcare Innovators </h1>
+<div class = "col-2">
+<li> Johnson & Johnson (JNJ) </li>
+<li> Pfizer (PFE) </li>
+<li> Moderna (MRNA) </li>
+<li> AbbVie Inc. (ABBV) </li>
+<li> Novartis AG (NVS) </li>
+</div>
+<div class = "col-8">
+<style>
+  .sampleChart {
+     max-width: 300px;
+     height: 150px; }
+  * {   text-align: center;}
+</style>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+<canvas id = "pieChart3"> </canvas>
+<script>
+  let canvas3 = document.getElementById("pieChart3");
+  new Chart(canvas3, {
+     type: "pie",
+     data: {
+      // {'JNJ': 0.0, 'PFE': 0.27662, 'MRNA': 0.4558, 'ABBV': 0.26758, 'NVS': 0.0}
+        labels: ["JNJ", "PFE", "MRNA", "ABBV", "NVS"],
+        datasets: [{
+          backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+           borderWidth: 10,
+           data: [0.0,0.27662, 0.4558,  0.26758, 0.0]
+        }]
+     },
+  });
+</script>
+</div>
+
+
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-5"> 
+  <form method="post" action="/bundle_offer">
+  <input class="text" name="button-choice" class="form-control" value="3" hidden>
+  <div class="input-group mb-3">
+
+    <button type="submit" class="btn btn-info">Buy</button>
+    <span class="input-group-text">$</span>
+    <input type="text" name="money-invested" class="form-control"> 
+    <span class="input-group-text">.00</span>
+    </div>
+  </form>
+ </div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+      <div class="collapse" id="collapseExample4">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          
+          <div class = "row">
+            <h1> Option 4 :: Your pick </h1>
+            <div class = "col-2">
+              <form method="post" action="/bundle_offer">
+                <input class="text" name="button-choice" class="form-control" value="5" hidden>
+
+                 <input class="text" name="stock_name1" class="form-control" value="TSLA"> 
+                 <input class="text" name="stock_name2" class="form-control" value="PFE"> 
+                 <input class="text" name="stock_name3" class="form-control" value="MRNA"> 
+                <input class="text" name="stock_name4" class="form-control" value="ABBV"> 
+                <input class="text" name="stock_name5" class="form-control" value="NVS"> 
+                <button type="submit" class="btn btn-info">Picked!</button>
+
+
+              </form>
+            
+          </div>
+          <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart4"> </canvas>
+           <script>
+              let canvas4 = document.getElementById("pieChart4");
+              new Chart(canvas4, {
+                 type: "pie",
+                 data: {
+                  
+                    labels: ["TSLA", "PFE", "MRNA", "ABBV", "NVS"] ,
+                    datasets: [{
+                      backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: {{[0.0,0.27662, 0.4558,  0.26758, 0.0]}}
+                    }]
+                 },
+              });
+           </script>
+           </div>
+  
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+              <form method="post" action="/bundle_offer">
+              <input class="text" name="button-choice" class="form-control" value="4" hidden>
+              <div class="input-group mb-3">
+          
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+      
+
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      {%else%}
+      <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Technology Giants
+        </a> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Technology Giants
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                Healthcare Innovators
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                Consumer Discretionary Leaders
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                Your pick!
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+        
+      
+       
+
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          <div class="row">
+            <h1> Option 1 :: Technology Giants </h1>
+            <div class = "col-2">
+           
+                <li> Apple Inc. (AAPL) </li>
+                <li> Microsoft Corporation (MSFT) </li>
+                <li> Alphabet Inc. (GOOG) </li>
+                <li> Facebook, Inc. (META) </li>
+                <li> Facebook, Inc. (META) </li>
+                <li> Facebook, Inc. (META) </li>
+           
+            
+          </div>
+          <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart1"> </canvas>
+           <script>
+              let canvas1 = document.getElementById("pieChart1");
+              new Chart(canvas1, {
+                 type: "pie",
+                 data: {
+                  
+                    labels: ["Apple", "Microsoft", "Amazon", "Alphabet", "Meta"],
+                    datasets: [{
+                       backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: [0.50701, 0.49299, 0.0, 0.0, 0.0]
+                    }]
+                 },
+              });
+           </script>
+           </div>
+  
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+              <form method="post" action="/bundle_offer">
+              <input class="text" name="button-choice" class="form-control" value="1" hidden>
+              <div class="input-group mb-3">
+          
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+      
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+   
+<!-- Second Button Content -->
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          
+          <div class = "row">
+            <h1> Option 3 :: Consumer Discretionary Leaders </h1>
+            <div class = "col-2">
+            <li> The Walt Disney Company (DIS) </li>
+            <li> Nike, Inc. (NKE) </li>
+            <li> Starbucks Corporation (SBUX) </li>
+            <li> McDonald’s Corporation (MCD) </li>
+            <li> The Coca-Cola Company (KO) </li>
+            </div>
+            <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart2"> </canvas>
+           <script>
+              let canvas = document.getElementById("pieChart2");
+              new Chart(canvas, {
+                 type: "pie",
+                 data: {
+                  // {'DIS': 0.0, 'NKE': 0.4137, 'SBUX': 0.24492, 'MCD': 0.25383, 'KO': 0.08755}
+                    labels: ["Disney", "Nike", "Starbucks", "McDonald's", "Coca-Cola"],
+                    datasets: [{
+                      backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: [0.0, 0.4137,  0.24492, 0.25383, 0.08755]
+                    }]
+                 },
+              });
+           </script>
+           </div>
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+            <form method="post" action="/bundle_offer">
+            <input class="text" name="button-choice" class="form-control" value="2" hidden>
+              <div class="input-group mb-3">
+      
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+               
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+
+            </div>
+          </div>
+
+        </div>
+        
+
+</div>
+</div>
+<div class="collapse" id="collapseExample3">
+<div class="card card-body">
+<!-- # Body inside the Collapse Feature -->
+
+<div class = "row">
+<h1> Option 2 :: Healthcare Innovators </h1>
+<div class = "col-2">
+<li> Johnson & Johnson (JNJ) </li>
+<li> Pfizer (PFE) </li>
+<li> Moderna (MRNA) </li>
+<li> AbbVie Inc. (ABBV) </li>
+<li> Novartis AG (NVS) </li>
+</div>
+<div class = "col-8">
+<style>
+  .sampleChart {
+     max-width: 300px;
+     height: 150px; }
+  * {   text-align: center;}
+</style>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+<canvas id = "pieChart3"> </canvas>
+<script>
+  let canvas3 = document.getElementById("pieChart3");
+  new Chart(canvas3, {
+     type: "pie",
+     data: {
+      // {'JNJ': 0.0, 'PFE': 0.27662, 'MRNA': 0.4558, 'ABBV': 0.26758, 'NVS': 0.0}
+        labels: ["JNJ", "PFE", "MRNA", "ABBV", "NVS"],
+        datasets: [{
+          backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+           borderWidth: 10,
+           data: [0.0,0.27662, 0.4558,  0.26758, 0.0]
+        }]
+     },
+  });
+</script>
+</div>
+
+
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-5"> 
+  <form method="post" action="/bundle_offer">
+  <input class="text" name="button-choice" class="form-control" value="3" hidden>
+  <div class="input-group mb-3">
+
+    <button type="submit" class="btn btn-info">Buy</button>
+    <span class="input-group-text">$</span>
+    <input type="text" name="money-invested" class="form-control"> 
+    <span class="input-group-text">.00</span>
+    </div>
+  </form>
+ </div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+      <div class="collapse" id="collapseExample4">
+        <div class="card card-body">
+          <!-- # Body inside the Collapse Feature -->
+          
+          <div class = "row">
+            <h1> Option 4 :: Your pick </h1>
+            <div class = "col-2">
+              
+                <li>{{stock_name1}}</li>
+                <li>{{stock_name2}}</li>
+                <li>{{stock_name3}}</li>
+                <li>{{stock_name4}}</li>
+                <li>{{stock_name5}}</li>
+          </div>
+          <div class = "col-8">
+            <style>
+              .sampleChart {
+                 max-width: 300px;
+                 height: 150px; }
+              * {   text-align: center;}
+           </style>
+           <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+           </script>
+        <canvas id = "pieChart4"> </canvas>
+           <script>
+              let canvas4 = document.getElementById("pieChart4");
+              console.log("BAHHHH")
+              console.log({{weights}})
+              new Chart(canvas4, {
+                 type: "pie",
+                 data: {
+                  
+                    labels: ["{{stock_name1}}", "{{stock_name2}}","{{stock_name3}}", "{{stock_name4}}","{{stock_name5}}"] ,
+                    datasets: [{
+                      backgroundColor: ['rgb(' + 137 + ',' + 207 + ',' + 240 + ')', 'rgb(' + 244 + ',' + 194 + ',' + 194 + ')', 'rgb(' + 169 + ',' + 211 + ',' + 158 + ')', 'rgb(' + 200 + ',' + 158 + ',' + 211 + ')', 'rgb(' + 255 + ',' + 244 + ',' + 79 + ')'],
+                       borderWidth: 10,
+                       data: {{weights}}
+                       
+                    }]
+                 },
+              });
+           </script>
+           </div>
+  
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-5"> 
+              <form method="post" action="/bundle_offer">
+              <input class="text" name="button-choice" class="form-control" value="4" hidden>
+              <div class="input-group mb-3">
+          
+                <button type="submit" class="btn btn-info">Buy</button>
+                <span class="input-group-text">$</span>
+                <input type="text" name="money-invested" class="form-control"> 
+                <span class="input-group-text">.00</span>
+                </div>
+              </form>
+             </div>
+      
+
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      {%endif%}
+
       <img class="peep" src="static/Grape Logo.png" width="200">
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->

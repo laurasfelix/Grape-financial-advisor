@@ -43,3 +43,4 @@ def bundle_etf():
     # cleaned_weights = ef.clean_weights()
     # ef.save_weights_to_file("weights4.txt")
     return ef.portfolio_performance(verbose=False)
+
