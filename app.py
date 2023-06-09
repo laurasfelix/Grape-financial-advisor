@@ -124,7 +124,7 @@ def show_networth_page():
         initial_investing_amount = user_dicty['initial_investing_amount']
         percentage_return = round(bundle_optimization.bundle_opt(int(bundle_number))[0]*100,2)
         expected_return = ((percentage_return)/100+1)*initial_investing_amount
-        total = expected_return + user_dicty['expected_net_worth']
+        total = round(expected_return + user_dicty['expected_net_worth'],2)
         user_input.update_one({'name': props},{"$set": {'expected_net_worth': expected_return + user_dicty['expected_net_worth']}})
 
     else:

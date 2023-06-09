@@ -84,47 +84,96 @@
       <div class="col-6">
         {%if bool_check==True%}
           {%if bundle_number|int == 1%}
-      <h1> Your bundle choice was Option {{bundle_number}} :: Technology Giants, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your previous investments made here at Grape. </h1>
+      <h1> <h1> Your bundle choice was Option {{bundle_number}} :: Technology Giants, {{props}}!  </h1>
       <br>
       <br>
+      <h1> Congrats. </h1>
+      <br>
+      <br>
+      <h1> Your expected net-worth in a year is ${{expected_return}} with an</h1>
+      <h1> annual expected return rate of {{percentage_return}}%</h1>
+      <h1> based on your previous investments made here at Grape.</h1>
+      <br>
+      <br>
+      <h1>Thank you for your trust in us.</h1>
         <h1>Thank you for your trust in us.</h1>
           {%elif bundle_number|int== 2%}
-          <h1> Your bundle choice was Option 3 :: Consumer Discretionary Leaders, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your previous investments made here at Grape. </h1>
+          <h1> <h1> Your bundle choice was Option 3 :: Consumer Discretionary Leaders, {{props}}!  </h1>
           <br>
           <br>
-          <h1>Thank you for your trust in us.</h1>
+      <h1> Congrats. </h1>
+      <br>
+      <br>
+      <h1> Your expected net-worth in a year is ${{expected_return}} with an</h1>
+      <h1> annual expected return rate of {{percentage_return}}%</h1>
+      <h1> based on your previous investments made here at Grape.</h1>
+      <br>
+      <br>
+      <h1>Thank you for your trust in us.</h1>
           {%elif bundle_number|int == 3%}
-          <h1> Your bundle choice was Option 4 :: Your Pick, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your previous investments made here at Grape. </h1>
+          <h1> <h1> Your bundle choice was Option 2 :: Healthcare Innovators, {{props}}!  </h1>
           <br>
           <br>
-          <h1> Thank you for your trust in us.</h1>
+      <h1> Congrats. </h1>
+      <br>
+      <br>
+      <h1> Your expected net-worth in a year is ${{expected_return}} with an</h1>
+      <h1> annual expected return rate of {{percentage_return}}%</h1>
+      <h1> based on your previous investments made here at Grape.</h1>
+      <br>
+      <br>
+      <h1>Thank you for your trust in us.</h1>
           {%else%}
-          <h1> Your bundle choice was Option 4 :: Your Pick, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your previous investments made here at Grape. </h1>
+          <h1> <h1> Your bundle choice was Option 4 :: Your Pick, {{props}}!  </h1>
           <br>
           <br>
-          <h1> Thank you for your trust in us.</h1>
+      <h1> Congrats. </h1>
+      <br>
+      <br>
+      <h1> Your expected net-worth in a year is ${{expected_return}} with an</h1>
+      <h1> annual expected return rate of {{percentage_return}}%</h1>
+      <h1> based on your previous investments made here at Grape.</h1>
+      <br>
+      <br>
+      <h1>Thank you for your trust in us.</h1>
           {%endif%}
       {%else%}
       {%if bundle_number|int == 1%}
-      <h1> Your bundle choice was Option {{bundle_number}} :: Technology Giants, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investments made here at Grape. </h1>
+      <h1> Your bundle choice was Option {{bundle_number}} :: Technology Giants, {{props}}! Congrats.</h1>
+      <br>
+      <br> 
+      <h1>Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of</h1> 
+      <h1>{{percentage_return}}% based on your initial investments made here at Grape. </h1>
       <br>
       <br>
       <h1>Thank you for your trust in us, and we hope you
         come back for more soon.</h1>
           {%elif bundle_number|int==2%}
-          <h1> Your bundle choice was Option 3 :: Consumer Discretionary Leaders, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investments made here at Grape. </h1>
+          <h1> Your bundle choice was Option 3 :: Consumer Discretionary Leaders, {{props}}! Congrats.</h1>
+          <br> 
+          <br>
+          <h1>Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of</h1> 
+          <h1>{{percentage_return}}% based on your initial investments made here at Grape. </h1>
           <br>
           <br>
           <h1>Thank you for your trust in us, and we hope you
             come back for more soon.</h1>
           {%elif bundle_number|int==3%}
-          <h1> Your bundle choice was Option 2 :: Healthcare Innovators, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investments made here at Grape. </h1>
+          <h1> Your bundle choice was Option 2 :: Healthcare Innovators, {{props}}! Congrats.</h1> 
+          <br>
+          <br>
+          <h1>Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of</h1> 
+          <h1>{{percentage_return}}% based on your initial investments made here at Grape. </h1>
           <br>
           <br>
           <h1>Thank you for your trust in us, and we hope you
             come back for more soon.</h1>
           {%else%}
-          <h1> Your bundle choice was Option 4 :: Your Pick!, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investments made here at Grape. </h1>
+          <h1> Your bundle choice was Option 4 :: Your Pick, {{props}}! Congrats.</h1> 
+          <br>
+          <br>
+          <h1>Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of</h1> 
+          <h1>{{percentage_return}}% based on your initial investments made here at Grape. </h1>
           <br>
           <br>
           <h1>Thank you for your trust in us, and we hope you
