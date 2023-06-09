@@ -21,7 +21,7 @@ db = client.database
 
 user_input = db.user
 
-# user_input.delete_many({})
+user_input.delete_many({})
 
 all_users = list(user_input.find({}))
 
