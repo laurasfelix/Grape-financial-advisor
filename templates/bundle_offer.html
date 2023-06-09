@@ -75,7 +75,7 @@
                 <a class="nav-link active" href="#" style="font-size: 30px;">  </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/index" style="font-size: 30px;">    About us    </a>
+                <a class="nav-link active" href="/index#about_us_id" style="font-size: 30px;">    About us    </a>
               </li>
               
             </ul>
@@ -177,15 +177,18 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-5"> 
+                          <form method="post" action="/bundle_offer">
+                          <input class="text" name="button-choice" class="form-control" value="1" hidden>
                           <div class="input-group mb-3">
-                  
-                            <button type="button" class="btn btn-info">Buy</button>
+                      
+                            <button type="submit" class="btn btn-info">Buy</button>
                             <span class="input-group-text">$</span>
-                           
                             <input type="text" name="money-invested" class="form-control"> 
                             <span class="input-group-text">.00</span>
                             </div>
+                          </form>
                          </div>
+                  
 
                         </div>
                       </div>
@@ -237,14 +240,17 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-5"> 
+                        <form method="post" action="/bundle_offer">
+                        <input class="text" name="button-choice" class="form-control" value="2" hidden>
                           <div class="input-group mb-3">
                   
-                            <button type="button" class="btn btn-info">Buy</button>
+                            <button type="submit" class="btn btn-info">Buy</button>
                             <span class="input-group-text">$</span>
                            
                             <input type="text" name="money-invested" class="form-control"> 
                             <span class="input-group-text">.00</span>
                             </div>
+                          </form>
                          </div>
 
                         </div>
