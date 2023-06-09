@@ -76,11 +76,17 @@
       </nav>
 
       <div class="container">
+      <div class="row"> <br> <br> <br><div class="col-3">
+    </div></div>
       <div class="row">
       <div class="col-3">
       </div>
       <div class="col-6">
-      <h1> Your bundle choice was {{bundle_number}}, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investment.</h1>
+        {%if bool_check==True%}
+      <h1> Your bundle choice was {{bundle_number}}, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your previous investments made here at Grape. Thank you for your trust in us.</h1>
+      {%else%}
+      <h1> Your bundle choice was {{bundle_number}}, {{props}}! Congrats. Your expected net-worth in a year is ${{expected_return}}, with an annual expected return rate of {{percentage_return}}% based on your initial investment. Thank you for your trust in us, and we hope you'll return soon.</h1>
+      {%endif%}
       </div>
       </div>
       </div>

@@ -21,8 +21,9 @@ db = client.database
 
 user_input = db.user
 
-all_users = list(user_input.find({}))
+# user_input.delete_many({})
 
+all_users = list(user_input.find({}))
 
 all_names=[]
 
@@ -50,13 +51,17 @@ def name():
             user_input.insert_one(dictionary_user_name)
             all_users = list(user_input.find({}))
             all_names.append(name)
-            for i in all_users:
-                all_names.append(i['name'])
-            session['users'].append({'name':name, 'bool_check':False, 'bundle_number': 1})
+            listy = session['users']
+            listy.append({'name':name, 'bool_check':False, 'bundle_number': 1})
+            session['users'] = listy
+           
             
 
         else:
-            session['users'].append({'name':name, 'bool_check':True, 'bundle_number': 1})
+            listy = session['users']
+            listy.append({'name':name, 'bool_check':True, 'bundle_number': 1})
+            session['users'] = listy
+            
             bool_check=True
 
         # return redirect(url_for('.bundle_offer', props=name, bool_check=bool_check))
@@ -72,7 +77,13 @@ def money():
     
     if request.method == 'POST':
         bundle_choice = request.form['button-choice']
-        all_info_user['bundle_number'] = bundle_choice
+        listy = []
+        for i in session['users']:
+            if i['name'] == props:
+                listy.append({'name': i['name'], 'bool_check':i['bool_check'], 'bundle_number': bundle_choice})
+            else:
+                listy.append(i)
+        session['users'] = listy
         cash = request.form["money-invested"]
         all_users = list(user_input.find({}))
         initial_investing_amount = all_users[all_names.index(props)]['initial_investing_amount']
@@ -84,6 +95,7 @@ def money():
 
 @app.route("/networth", methods=['GET'])
 def show_networth_page():
+    print(session['users'])
     all_info_user = session['users'][-1]
     props = all_info_user['name']
     bool_check=all_info_user['bool_check']
@@ -91,9 +103,11 @@ def show_networth_page():
     user_dicty = list(user_input.find({'name': props}))[0]
     initial_investing_amount = user_dicty['initial_investing_amount']
     percentage_return = round(bundle_optimization.bundle_opt(int(bundle_number))[0]*100,2)
-    expected_return = ((percentage_return+1)*initial_investing_amount)
+    expected_return = ((percentage_return)/100+1)*initial_investing_amount
+    total = expected_return + user_dicty['expected_net_worth']
+    user_input.update_one({'name': props},{"$set": {'expected_net_worth': expected_return + user_dicty['expected_net_worth']}})
     
-    return render_template("/networth.html", props=props, bool_check=bool_check, bundle_number=bundle_number, percentage_return=percentage_return, expected_return=expected_return)
+    return render_template("/networth.html", props=props, bool_check=bool_check, bundle_number=bundle_number, percentage_return=percentage_return, expected_return=total)
 
 
 if __name__ == '__main__':
