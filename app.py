@@ -108,6 +108,26 @@ def show_networth_page():
     
     return render_template("/networth.html", props=props, bool_check=bool_check, bundle_number=bundle_number, percentage_return=percentage_return, expected_return=total)
 
+@app.route("/laura", methods=['GET', 'POST'])
+def laura():
+    if request.method=="GET":
+        return render_template("/laura.html")
+    else:
+        return render_template("/index")
 
+@app.route("/jason", methods=['GET', 'POST'])
+def jason():
+    if request.method=="GET":
+        return render_template("/jason.html")
+    else:
+        return render_template("/index")
+
+@app.route("/anahi", methods=['GET', 'POST'])
+def anahi():
+    if request.method=="GET":
+        return render_template("/anahi.html")
+    else:
+        return render_template("/index")
+    
 if __name__ == '__main__':
     app.run()
